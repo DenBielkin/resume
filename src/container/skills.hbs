@@ -7,20 +7,22 @@
     {{#with main}}
         <main>
             <section>
-                {{> title data=summary.title big=true}}
-                <div>
-                    <p>{{summary.text}}</p>
-                </div>
+                {{> title data="All skills" big=true}}
+                <ul>
+                    {{#each skills}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
             </section>
-
-            {{#with experience}}
             <section>
-                    {{> title data=title}}
-                <div>
-                    <p>{{text}}</p>
-                </div>
+                {{> title data="My hobbies"}}
+                <ul>
+                    {{#each hobbies}}
+                        <li>{{name}} 
+                            {{#if isMain}} (favourite) {{/if}}</li>
+                    {{/each}}
+                </ul>
             </section>
-            {{/with}}
         </main>
     {{/with}}
 </div>
