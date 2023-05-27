@@ -549,6 +549,9 @@ router.get('/web', function (req, res) {
           ],
         },
       ],
+    },
+  })
+})
 
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
