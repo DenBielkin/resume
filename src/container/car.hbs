@@ -1,0 +1,199 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+     <ul>
+        <h1>Toyota Camry <span class="badge bg-secondary"></span></h1>
+        <p><b>2022, SILVER</b></p>
+        <hr>
+    </ul>
+    <ul>
+        <h4>FEATURES</h4>
+        <ul>
+        {{#with features}}
+            {{#with interior}}
+                <h5>Interior</h5>
+                {{#with seats}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                SEATS
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">material: {{material}}</a></li>
+                        <li><a class="dropdown-item" href="#">color: {{color}}</a></li>
+                        <li><a class="dropdown-item" href="#">heater: {{heated}}</a></li>
+                        <li><a class="dropdown-item" href="#">ventilated: {{ventilated}}</a></li>
+                    </ul>
+                </div>
+                {{/with}}
+                {{#with dashboard}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                DASHBOARD
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">material: {{material}}</a></li>
+                        <li><a class="dropdown-item" href="#">color: {{color}}</a></li>
+                        <li><a class="dropdown-item" href="#">display: LCD, 10.1, 1280x720, touchscreen</a></li>
+                    </ul>
+                </div>
+                {{/with}}
+                {{#with audio}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                AUDIO
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">system: {{system}}</a></li>
+                        <li><a class="dropdown-item" href="#">speakers: {{speakers}}</a></li>
+                        <li><a class="dropdown-item" href="#">subwoofer: {{subwoofer}}</a></li>
+                        <li><a class="dropdown-item" href="#">bluetooth: {{bluetooth}}</a></li>
+                        <li><a class="dropdown-item" href="#">USB: {{USB}}</a></li>
+                    </ul>
+                </div>
+                {{/with}}
+            {{/with}}
+            <br>
+            <br>
+            {{#with exterior}}
+                <h5>Exterior</h5>
+                {{#with wheels}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHEELS
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">size: {{size}}</a></li>
+                        <li><a class="dropdown-item" href="#">type: {{type}}</a></li>
+                        <li><a class="dropdown-item" href="#">color: {{color}}</a></li>
+                    </ul>
+                </div>
+                {{/with}}
+                {{#with headlights}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                HEADLIGHTS
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">type: {{type}}</a></li>
+                        <li><a class="dropdown-item" href="#">brightness: {{brightness}}</a></li>
+                        <li><a class="dropdown-item" href="#">automatic: {{automatic}}</a></li>
+                    </ul>
+                </div>
+                {{/with}}
+                {{#with sunroof}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                SUNROOF
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">type: {{type}}</a></li>
+                        <li><a class="dropdown-item" href="#">size: {{size}}</a></li>
+                        <li><a class="dropdown-item" href="#">automatic: {{automatic}}</a></li>
+                    </ul>
+                </div>
+                {{/with}}
+            {{/with}}
+            <br>
+            <br>
+            {{#with safety}}
+                <h5>Safety</h5>
+                {{#with airbags}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                AIRBAGS
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">front: {{front}}</a></li>
+                        <li><a class="dropdown-item" href="#">side: {{side}}</a></li>
+                        <li><a class="dropdown-item" href="#">knee: {{knee}}</a></li>
+                        <li><a class="dropdown-item" href="#">rear: {{rear}}</a></li>
+                    </ul>
+                </div>
+                {{/with}}
+                <div class="btn-group dropend">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ASSISTANCE
+                </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> blind_spot_monitoring: true</a></li>
+                        <li><a class="dropdown-item" href="#">rear_cross_traffic_alert: true</a></li>
+                        <li><a class="dropdown-item" href="#">lane_departure_warning: true</a></li>
+                        <li><a class="dropdown-item" href="#">adaptive_cruise_control: true</a></li>
+                        <li><a class="dropdown-item" href="#">collision_warning: true</a></li>
+                    </ul>
+                </div>
+            {{/with}}
+        {{/with}}
+        <br>
+        <br>
+        </ul>
+        <h4>ENGINE</h4>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                    type
+                <span class="badge bg-primary rounded-pill">gasoline</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                    displacement
+                <span class="badge bg-primary rounded-pill">2.5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                    horsepower
+                <span class="badge bg-primary rounded-pill">206</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                    torque
+                <span class="badge bg-primary rounded-pill">186</span>
+            </li>
+        </ul>
+        <h5>Transmission</h5>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                    type
+                <span class="badge bg-primary rounded-pill">utomatic</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                    gears
+                <span class="badge bg-primary rounded-pill">8</span>
+            </li>
+        </ul>
+        <h4>FUEL ECONOMY</h4>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                city
+                <span class="badge bg-primary rounded-pill">28</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                highway
+                <span class="badge bg-primary rounded-pill">39</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                combined
+                <span class="badge bg-primary rounded-pill">32</span>
+            </li>
+        </ul>
+        <br>
+        <br>
+        <h4>PRICE</h4>
+        {{#with price}}
+        <p>base: <b>{{base}}</b></p>
+        <p>destination: <b>{{destination}}</b></p>
+        <h5>options:</h5>
+        {{#with options}}
+        <p>navigation: <b>{{navigation}}</b></p>
+        <p>moonroof: <b>{{moonroof}}</b></p>
+        <p>premium_paint: <b>{{premium_paint}}</b></p>
+        {{/with}}
+        {{/with}}  
+    </ul>
+</div>
+
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
