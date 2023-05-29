@@ -638,11 +638,11 @@ router.get('/program', function (req, res) {
 })
 
 // ================================================================
-router.get('/mac', function (req, res) {
+router.get('/mac1', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('mac', {
+  res.render('mac1', {
     layout: "basic",
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
