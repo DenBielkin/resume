@@ -1,0 +1,126 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <ul>
+        <p><h1>BIELKIN</h1></p>
+        <hr>
+    </ul>
+    <div>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Computers & Tablets</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tablets</a></li>
+            </ol>
+        </nav>
+    </div>
+    <ul>
+        <h3>Apple MacBook Pro</h3>
+        <em>The ultimate notebook for power users</em>
+        <p>Price: <b>1999.99$</b></p>
+    </ul>
+    <br>
+    
+    <ul>
+        <h4>FEATURES:</h4>
+    </ul>
+    <ul>
+        {{#with features}}
+            {{#with processor}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Processor
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{brand}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{model}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{speed}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{cores}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{cache}}</a></li>
+                </ul>
+            </div>
+            {{/with}} 
+            {{#with memory}}           
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Memory
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{type}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{size}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{speed}}</a></li>
+                </ul>
+            </div>
+            {{/with}}           
+            {{#with storage}}           
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Storage
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{type}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{size}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            {{#with display}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Display
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{size}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{resolution}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{technology}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{color_space}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{brightness}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{refresh_rate}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            {{#with graphics}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Graphics
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{brand}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{model}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{memory}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            {{#with battery}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Battery
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{type}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{capacity}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{life}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            <br>
+            <br>
+            <h5>Accessories:</h5>
+                {{#each accessories}}
+                    <p>{{name}}</p>
+                    <p>price: <b>{{price}}</b></p>
+                    <br>
+                {{/each}}
+            
+        {{/with}}
+    </ul>
+</div>
+
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
