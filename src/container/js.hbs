@@ -1,0 +1,92 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <ul>
+        <h1>JavaScript <span class="badge bg-secondary"></span></h1>
+        <em>{{description}}</em>
+    </ul>
+    <ul>
+        <em>{{history.year}}, {{history.founder}}</em>
+        <hr>
+    </ul>
+    <ul>
+        <div class="btn-group dropend">
+         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Types
+        </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Number</a></li>
+                <li><a class="dropdown-item" href="#">String</a></li>
+                <li><a class="dropdown-item" href="#">Boolean</a></li>
+                <li><a class="dropdown-item" href="#">Nuii</a></li>
+                <li><a class="dropdown-item" href="#">Undefined</a></li>
+                <li><a class="dropdown-item" href="#">Symbol</a></li>
+                <li><a class="dropdown-item" href="#">Object</a></li>
+            </ul>
+        </div>
+    </ul>
+    <ul>
+        <div class="btn-group dropend">
+         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Features
+        </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">First-class functions</a></li>
+                <li><a class="dropdown-item" href="#">Closures</a></li>
+                <li><a class="dropdown-item" href="#">Dynamic typing</a></li>
+                <li><a class="dropdown-item" href="#">Prototype-based inheritance</a></li>
+                <li><a class="dropdown-item" href="#">Asynchronous programming with Promises and async/await</a></li>
+                <li><a class="dropdown-item" href="#">Modules with import/export statements</a></li>
+            </ul>
+        </div>
+    </ul>
+    <ul>
+        <div class="btn-group dropend">
+         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Libraries
+        </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">jQuery</a></li>
+                <li><a class="dropdown-item" href="#">React</a></li>
+                <li><a class="dropdown-item" href="#">Angular</a></li>
+                <li><a class="dropdown-item" href="#">Node.js</a></li>
+                <li><a class="dropdown-item" href="#">Express.js</a></li>
+                <li><a class="dropdown-item" href="#">Moment.js</a></li>
+            </ul>
+        </div>
+    </ul>
+    <ul>
+        <div class="btn-group dropend">
+         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tools
+        </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Babel</a></li>
+                <li><a class="dropdown-item" href="#">Webpack</a></li>
+                <li><a class="dropdown-item" href="#">ESLint</a></li>
+                <li><a class="dropdown-item" href="#">Jest</a></li>
+                <li><a class="dropdown-item" href="#">Mocha</a></li>
+                <li><a class="dropdown-item" href="#">Selenium</a></li>
+            </ul>
+        </div>
+    </ul>
+    <ul>
+        <h5>Community: <span class="badge bg-secondary"></span></h5>
+    </ul>
+    <ul>
+        {{#each community}}
+            <a>{{type}}:<button type="button" class="btn btn-link">Link</button></a>
+        {{/each}}
+    </ul>
+</div>
+
+
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
