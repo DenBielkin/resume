@@ -1,0 +1,163 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+        <nav class="navbar bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand"><b>BIELKIN</b></a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><b>Search</b></button>
+                </form>
+            </div>
+        </nav>
+    <div>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Computers & Tablets</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tablets</a></li>
+            </ol>
+        </nav>
+    </div>
+    <ul>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Description:</h5>
+                <p class="card-text">The ultimate notebook for power users.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Price: <b>1999.99</b></li>
+        </div>
+    </ul>
+    <br>
+    
+    <ul>
+        <h4>FEATURES:</h4>
+    </ul>
+    <ul>
+        {{#with features}}
+            {{#with processor}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Processor
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{brand}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{model}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{speed}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{cores}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{cache}}</a></li>
+                </ul>
+            </div>
+            {{/with}} 
+            {{#with memory}}           
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Memory
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{type}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{size}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{speed}}</a></li>
+                </ul>
+            </div>
+            {{/with}}           
+            {{#with storage}}           
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Storage
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{type}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{size}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            {{#with display}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Display
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{size}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{resolution}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{technology}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{color_space}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{brightness}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{refresh_rate}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            {{#with graphics}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Graphics
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{brand}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{model}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{memory}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            {{#with battery}}
+            <div class="btn-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Battery
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">{{type}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{capacity}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{life}}</a></li>
+                </ul>
+            </div>
+            {{/with}}
+            <br>
+            <br>
+            <h5>Accessories:</h5>
+               <div class="card-group">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Keyboard</h5>
+                        <p class="card-text">Apple Magic Keyboard</p>
+                        </div>
+                        <div class="card-footer">
+                        <small class="text-body-secondary">price: <b>99.99</b></small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Mouse</h5>
+                        <p class="card-text">Apple Magic Mouse 2</p>
+                        </div>
+                        <div class="card-footer">
+                        <small class="text-body-secondary">price: <b>79.99</b></small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Adapter</h5>
+                        <p class="card-text">USB-C to USB Adapter</p>
+                        </div>
+                        <div class="card-footer">
+                        <small class="text-body-secondary">price: <b>19.99</b></small>
+                        </div>
+                    </div>
+                </div>
+        {{/with}}
+    </ul>
+</div>
+
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
