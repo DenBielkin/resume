@@ -639,12 +639,12 @@ router.get('/program', function (req, res) {
 
 // ================================================================
 
-router.get('/mac1', function (req, res) {
+router.get('/facebook', function (req, res) {
 
 
 // router.get Створює нам один ентпоїнт
 
-router.get('/facebook', function (req, res) {
+router.get('facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
@@ -801,7 +801,7 @@ router.get('/facebook', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-router.get('/mac', function (req, res) {
+router.get('/mac1', function (req, res) {
 
   // res.render генерує нам HTML сторінку
 
